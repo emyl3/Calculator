@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Weekend Challenge #3</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="vendor/jquery.min.js"></script>
+    <script src="scripts/client.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <!--viewport-->
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-12 view"><span class="viewport"></span></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!--clear and division button-->
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-9 clear"><button class="clear">clear</button></div>
+            <div class="col-xs-3 operator"><button id="divide" data-type="operator" data-value="divide">&divide;</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!--7, 8, 9 and multiplication button-->
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-3 digit"><button id="7" data-type="digit" data-value="7">7</button></div>
+            <div class="col-xs-3 digit"><button id="8" data-type="digit" data-value="8">8</button></div>
+            <div class="col-xs-3 digit"><button id="9" data-type="digit" data-value="9">9</button></div>
+            <div class="col-xs-3 operator"><button id="multiply" data-type="operator" data-value="multiply">&times;</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!--4, 5, 6 and subtraction button-->
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-3 digit"><button id="4" data-type="digit" data-value="4">4</button></div>
+            <div class="col-xs-3 digit"><button id="5" data-type="digit" data-value="5">5</button></div>
+            <div class="col-xs-3 digit"><button id="6" data-type="digit" data-value="6">6</button></div>
+            <div class="col-xs-3 operator"><button id="subtract" data-type="operator" data-value="subtract">&minus;</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!--1, 2, 3 and addition button-->
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-3 digit"><button id="1" data-type="digit" data-value="1">1</button></div>
+            <div class="col-xs-3 digit"><button id="2" data-type="digit" data-value="2">2</button></div>
+            <div class="col-xs-3 digit"><button id="3" data-type="digit" data-value="3">3</button></div>
+            <div class="col-xs-3 operator"><button id="add" data-type="operator" data-value="add">&plus;</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!--0, decimal and equals button-->
+      <div class="row">
+        <div class="col-xs-4">
+          <div class="row">
+            <div class="col-xs-6 digit"><button id="0" data-type="digit" data-value="0">0</button></div>
+            <div class="col-xs-3 digit"><button id="decimal" data-type="operator" data-value=".">&#46;</button></div>
+            <div class="col-xs-3 operator"><button id="equals" data-type="operator" data-value="=">&#61;</button></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+</html>
