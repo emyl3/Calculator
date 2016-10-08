@@ -3,35 +3,39 @@ var router = express.Router();
 
 var result;
 var operator;
+var a;
+var b;
 
 router.get('/', function (req, res) {
   console.log(result);
   res.send(result.toString());
 });
 
-router.post('/', function (req, res) {
-  operator = req.body.type;
-  var a = parseFloat(req.body.firstNum);
-  var b = parseFloat(req.body.secondNum);
+router.post('/multiply', function (req, res) {
+  getValue(req.body.type, req.body.firstNum, req.body.secondNum);
+  result = a * b;
+});
 
-  switch (operator){
-    case 'multiply':
-      result = a * b;
-      break;
+router.post('/divide', function (req, res) {
+  getValue(req.body.type, req.body.firstNum, req.body.secondNum);
+  result = a / b;
+});
 
-    case 'divide':
-      result = a / b;
-      break;
+router.post('/subtract', function (req, res) {
+  getValue(req.body.type, req.body.firstNum, req.body.secondNum);
+  result = a - b;
+});
 
-    case 'subtract':
-      result = a - b;
-      break;
-
-    case 'add':
-      result = a + b;
-      break;
-  }
+router.post('/add', function (req, res) {
+  getValue(req.body.type, req.body.firstNum, req.body.secondNum);
+  result = a + b;
   res.sendStatus(200);
 });
+
+function getValue(type, first, second) {
+  operator = type;
+  a = parseFloat(first);
+  b = parseFloat(second);
+}
 
 module.exports = router;

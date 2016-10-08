@@ -52,7 +52,7 @@ function calculations() {
 function sendValues() {
   $.ajax({
     type: 'POST',
-    url: '/type',
+    url: '/type/' + input.type,
     data: input,
     success: getCalculation,
   });
