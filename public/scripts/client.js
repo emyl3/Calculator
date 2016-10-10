@@ -7,14 +7,16 @@ $(function () {
   $('.clear').on('click', clearViewport);
 });
 
+//clears the viewport
 function clearViewport() {
   input.firstNum = '';
   input.secondNum = '';
   input.type = '';
   numString = '';
-  $('.viewport').text('');
+  $('.viewport').text('0');
 }
 
+//makes the calculations
 function calculations() {
   var buttonType = $(this).data('type');
   var buttonValue = $(this).data('value');
@@ -40,7 +42,7 @@ function calculations() {
       } else if (buttonValue === '=') {
         input.secondNum = numString;
         $('.viewport').text(input.secondNum);
-        sendValues();
+        sendValues(input.type);
       }
 
       numString = '';
@@ -49,15 +51,17 @@ function calculations() {
   return input;
 }
 
-function sendValues() {
+//makes an ajax post request of the values inputed by the user
+function sendValues(type) {
   $.ajax({
     type: 'POST',
-    url: '/type/' + input.type,
+    url: '/type/' + type,
     data: input,
     success: getCalculation,
   });
 }
 
+//makes an ajax get request of the calculated result
 function getCalculation() {
   $.ajax({
     type: 'GET',

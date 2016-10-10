@@ -14,16 +14,19 @@ router.get('/', function (req, res) {
 router.post('/multiply', function (req, res) {
   getValue(req.body.type, req.body.firstNum, req.body.secondNum);
   result = a * b;
+  res.sendStatus(200);
 });
 
 router.post('/divide', function (req, res) {
   getValue(req.body.type, req.body.firstNum, req.body.secondNum);
   result = a / b;
+  res.sendStatus(200);
 });
 
 router.post('/subtract', function (req, res) {
   getValue(req.body.type, req.body.firstNum, req.body.secondNum);
   result = a - b;
+  res.sendStatus(200);
 });
 
 router.post('/add', function (req, res) {

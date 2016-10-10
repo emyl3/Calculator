@@ -1,0 +1,45 @@
+button {
+	box-shadow:inset 0px 1px 0px 0px #9d9c9b;
+	background-color:#8f8e8d;
+	border:1px solid #686665;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+  width: 100%;
+}
+
+button:hover {
+	background-color:#9d9c9b;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+button#add, button#equals, button#divide, button#multiply, button#subtract {
+  box-shadow:inset 0px 1px 0px 0px #ffae19;
+  background-color:#e69500;
+  border:1px solid #cc8400;
+}
+
+button.clear {
+  box-shadow:inset 0px 1px 0px 0px #c9290d;
+  background-color: #a0200a;
+  border:1px solid #781807;
+}
+
+div.col-xs-12 {
+  background-color: skyblue;
+}
+
+div.view {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: right;
+  font: 2em 'Comfortaa', cursive;
+}
