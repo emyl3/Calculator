@@ -4,12 +4,14 @@ This application was created for an assignment for Prime Digital Academy and use
 The <b>Calculator</b> functions much like a regular calculator. It takes in 2 values and a type of mathematical operation. The calculator returns the calculated value of the inputs.
 
 ## Features
-Clear Button | Interface
+[Clear Button](#clear) | [Interface](#interface)
 
-### Clear Button
+### <a name="clear">Clear Button</a>###
+![alt tag](screenshots/calculator 1.png)
 The clear button restarts the experience.
 
-### Interface
+### <a name="interface">Interface</a>###
+![alt tag](screenshots/calculator 2.png)
 The interface functions like an actual calculator so pressing "2" before "4" results in the number "24". Then, a mathematical operator can be inputed at any time, followed by the next numerical value.
 
 ## Usage
